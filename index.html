@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENAI Inclusão - Login Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="web-container">
+    
+    <!-- Top Bar Header -->
+    <header class="top-header">
+      <div class="header-logo">
+        <h1>SENAI <span>Inclusão</span></h1>
+        <p>EDUCAÇÃO PARA TODOS</p>
+      </div>
+
+      <div class="accessibility-controls">
+        <button class="acc-btn contrast-btn" id="contrast-toggle" title="Alternar Alto Contraste">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Contraste</span>
+        </button>
+
+        <div class="font-resizer">
+          <button id="btn-font-down" title="Diminuir fonte">A-</button>
+          <span class="sep"></span>
+          <button id="btn-font-up" class="active" title="Aumentar fonte">A+</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sub-header Protected Badge -->
+    <div class="protected-badge">
+      <span class="badge-icon">✓</span>
+      <p>Ambiente protegido, inclusivo e feito para você aprender com autonomia.</p>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Coluna Esquerda: Imagem da Comunidade -->
+      <section class="banner-column">
+        <div class="banner-overlay">
+          <h2>Comunidade de Aprendizagem</h2>
+          <p>Aprenda em um ambiente colaborativo, inclusivo e acessível.</p>
+        </div>
+      </section>
+
+      <!-- Coluna Direita: Card de Login -->
+      <section class="login-card">
+        <div class="portal-badge">
+          <span class="status-dot"></span>
+          <span>PORTAL DE APRENDIZAGEM</span>
+        </div>
+
+        <h2 class="card-title">Acesse sua conta</h2>
+        <p class="card-subtitle">Entre com seus dados para continuar sua jornada de aprendizagem.</p>
+
+        <!-- Form de Login -->
+        <form class="auth-form" id="login-form">
+          <div class="form-group">
+            <label for="usuario">Usuário</label>
+            <div class="input-field">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <input type="text" id="usuario" placeholder="Digite seu e-mail ou CPF" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha *</label>
+            <div class="input-field">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <input type="password" id="senha" placeholder="Digite sua senha" required>
+              <button type="button" class="eye-toggle" title="Mostrar/ocultar senha">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="custom-checkbox">
+              <input type="checkbox" checked>
+              <span class="label-text">Lembrar meu acesso</span>
+            </label>
+            <button type="button" class="link-forgot" id="forgot-link">Esqueci minha senha</button>
+          </div>
+
+          <button type="submit" class="btn-primary">Entrar</button>
+        </form>
+
+        <!-- Formulário de Recuperação (Oculto por padrão) -->
+        <div class="recovery-box" id="recovery-box" style="display: none;">
+          <h3>Recuperar Senha</h3>
+          <p>Digite seu e-mail ou CPF para receber as instruções de redefinição.</p>
+          <div class="form-group">
+            <div class="input-field">
+              <input type="text" id="rec-usuario" placeholder="Digite seu e-mail ou CPF">
+            </div>
+          </div>
+          <button type="button" class="btn-primary" id="btn-send-recovery">Enviar Instruções</button>
+          <button type="button" class="btn-secondary" id="btn-back-login">Voltar ao Login</button>
+        </div>
+
+        <div class="divider">
+          <span>PRIMEIRO ACESSO</span>
+        </div>
+
+        <div class="support-link">
+          <span class="help-icon">?</span>
+          <a href="#" id="support-link">Precisa de ajuda para acessar? Fale com o suporte</a>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
